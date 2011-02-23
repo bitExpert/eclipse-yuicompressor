@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+	<extension
+		point="org.eclipse.ui.popupMenus">
+
+		<objectContribution
+			objectClass="org.eclipse.core.resources.IFile"
+			nameFilter="*.js"
+			id="de.bitexpert.eclipse.yuicompressor.jsMarker">
+			<menu
+				label="External Tools"
+				path="additions"
+				id="de.bitexpert.eclipse.popup.externalTools">
+				<separator name="content"/>
+			</menu>
+			<action
+				label="Compress Javascript"
+				class="de.bitexpert.eclipse.yuicompressor.popup.actions.JsCompressExecutor"
+				menubarPath="de.bitexpert.eclipse.popup.externalTools/content"
+				enablesFor="+"
+				id="de.bitexpert.eclipse.yuicompressor.execAction">
+			</action>
+
+		</objectContribution>
+
+		<objectContribution
+			objectClass="org.eclipse.core.resources.IFile"
+			nameFilter="*.css"
+			id="de.bitexpert.eclipse.yuicompressor.cssMarker">
+			<menu
+				label="External Tools"
+				path="additions"
+				id="de.bitexpert.eclipse.popup.externalTools">
+				<separator name="content"/>
+			</menu>
+			<action
+				label="Compress CSS"
+				class="de.bitexpert.eclipse.yuicompressor.popup.actions.CssCompressExecutor"
+				menubarPath="de.bitexpert.eclipse.popup.externalTools/content"
+				enablesFor="+"
+				id="de.bitexpert.eclipse.yuicompressor.execAction">
+			</action>
+
+		</objectContribution>
+	</extension>
+</plugin>
