@@ -4,7 +4,7 @@ README
 What is Eclipse YUICompressor?
 ----------------
 
-Eclipse Smartsprites offers an integration of YUI Compressor (The Yahoo!
+Eclipse YUICompressor offers an integration of YUI Compressor (The Yahoo!
 JavaScript and CSS Compressor) into the Eclipse IDE. The plugin allows you
 to easily compress JS and CSS files from within your IDE.
 The plugin contributes a context menu to the project explorer view. Right click
