@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2007-2010 bitExpert AG
+ * Copyright (c) 2007-2011 bitExpert AG
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -18,6 +18,7 @@
 package de.bitexpert.eclipse.yuicompressor.wizards;
 
 
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -36,6 +37,7 @@ public class NewFileWizard extends Wizard implements INewWizard
 	private IStructuredSelection selection;
 	private NewFileWizardPage newFileWizardPage;
 	private String choosenFilename;
+	private IPath choosenPath;
 
 
 	/**
@@ -64,9 +66,8 @@ public class NewFileWizard extends Wizard implements INewWizard
 	public boolean performFinish()
 	{
 		// build the complete filename relative to the workspace root directory
-		this.choosenFilename = this.newFileWizardPage.getContainerFullPath().
-			addTrailingSeparator().append(this.newFileWizardPage.getFileName()).
-			toOSString();
+		this.choosenPath     = this.newFileWizardPage.getContainerFullPath();
+		this.choosenFilename = this.newFileWizardPage.getFileName();
 		return true;
 	}
 
@@ -84,6 +85,22 @@ public class NewFileWizard extends Wizard implements INewWizard
 		 * in the <code>finish</code> method to another local member.
 		 */
 		return this.choosenFilename;
+	}
+
+
+	/**
+	 * Returns the container that was choosen in the wizard page dialog.
+	 *
+	 * @return IPath
+	 */
+	public IPath getPath()
+	{
+		/**
+		 * since the page gets disposed after finishing the dialog we cannot
+		 * access the member from the page. Thus we copy the needed information
+		 * in the <code>finish</code> method to another local member.
+		 */
+		return this.choosenPath;
 	}
 
 
