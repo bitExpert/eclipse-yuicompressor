@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: YUI Compressor Eclipse Plugin
 Bundle-SymbolicName: de.bitexpert.eclipse.yuicompressor;singleton:=true
-Bundle-Version: 0.0.3
+Bundle-Version: 0.0.4
 Bundle-Activator: de.bitexpert.eclipse.yuicompressor.YUIActivator
 Bundle-Vendor: bitExpert AG
 Require-Bundle: org.eclipse.ui,
@@ -12,7 +12,5 @@ Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.core.resources,
  org.eclipse.ui.console,
  org.eclipse.ui.dialogs
-Bundle-ClassPath: lib/jargs-1.0.jar,
- lib/rhino-1.6R7.jar,
- lib/yuicompressor-2.4.2.jar,
+Bundle-ClassPath: lib/yuicompressor-2.4.2.jar,
  .
