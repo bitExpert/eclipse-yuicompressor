@@ -44,7 +44,7 @@ import de.bitexpert.eclipse.yuicompressor.wizards.NewFileWizard;
  * Abstract action class with the default logic for executing an YUI Compressor
  * task.
  *
- * @author	Stephan Hochdoerfer <S.Hochdoerfer@bitExpert.de>
+ * @author	Stephan Hochdörfer <S.Hochdoerfer@bitExpert.de>
  */
 
 

@@ -28,7 +28,7 @@ import com.yahoo.platform.yui.compressor.CssCompressor;
 /**
  * Action to execute the YUI CSS Compressor.
  *
- * @author	Stephan Hochdoerfer <S.Hochdoerfer@bitExpert.de>
+ * @author	Stephan Hochdörfer <S.Hochdoerfer@bitExpert.de>
  */
 
 

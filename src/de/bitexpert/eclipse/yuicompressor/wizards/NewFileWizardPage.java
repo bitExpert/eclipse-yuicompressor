@@ -25,7 +25,7 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 /**
  * New File Wizard Page
  *
- * @author	Stephan Hochdoerfer <S.Hochdoerfer@bitExpert.de>
+ * @author	Stephan Hochdörfer <S.Hochdoerfer@bitExpert.de>
  */
 
 
