@@ -26,6 +26,26 @@
 
 		<objectContribution
 			objectClass="org.eclipse.core.resources.IFile"
+			nameFilter="*.json"
+			id="de.bitexpert.eclipse.yuicompressor.jsMarker">
+			<menu
+				label="External Tools"
+				path="additions"
+				id="de.bitexpert.eclipse.popup.externalTools">
+				<separator name="content"/>
+			</menu>
+			<action
+				label="Compress Javascript"
+				class="de.bitexpert.eclipse.yuicompressor.popup.actions.JsCompressExecutor"
+				menubarPath="de.bitexpert.eclipse.popup.externalTools/content"
+				enablesFor="+"
+				id="de.bitexpert.eclipse.yuicompressor.execAction">
+			</action>
+
+		</objectContribution>
+
+		<objectContribution
+			objectClass="org.eclipse.core.resources.IFile"
 			nameFilter="*.css"
 			id="de.bitexpert.eclipse.yuicompressor.cssMarker">
 			<menu
